@@ -1,0 +1,39 @@
+<h2 class="text-center fs-5 color my-4">Number Of Products is : <span>{{numProduct}}</span></h2>
+<section class="product">
+  <div class="container m-5" >
+    <div class="card mb-3" *ngFor="let product of products" style="max-width: 450px;">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img [src]="product.imageSrc" class="img-fluid rounded-start w-100" alt="...">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body ms-3">
+            <h5 class="card-title mt-2">{{product.name}}</h5>
+            <p class="card-text text-dark my-1">{{product.describtion}}</p>
+            <p class="card-text text-dark my-2">Peice : {{product.price}}$</p>
+            <button class="btn3 mb-2" (click)="deleteProduct(product)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container m-5" *ngFor="let pro of ApiProduct">
+    <div class="card mb-3" style="max-width: 450px;">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img [src]="pro.image" class="img-fluid rounded-start w-100" alt="...">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body ms-3">
+            <h5 class="card-title mt-2">{{pro.title}}</h5>
+            <p class="card-text text-dark my-1"></p>
+            <p class="card-text text-dark my-2">Peice : {{pro.price}}$</p>
+            <button class="btn3 mb-2" (click)="deleteApiProduct(pro)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

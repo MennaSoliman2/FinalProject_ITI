@@ -1,0 +1,23 @@
+body {padding-top:20px;}
+.container{
+  width: 90%;
+}
+label{
+  font-size: large;
+  margin-bottom: 5px ;
+}
+input{
+  margin-bottom: 15px;
+  padding: 10px;
+}
+textarea{
+  margin-bottom: 15px;
+}
+.btn{
+  background-color: #4ba9e9;
+  border: 1px solid #4ba9e9;
+}
+.btn:hover{
+  background-color: whitesmoke;
+  color: #4ba9e9;
+}

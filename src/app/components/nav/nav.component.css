@@ -1,0 +1,101 @@
+header{
+  background-color: #4ba9e9;
+  padding: 20px 0;
+}
+.active{
+  background-color: #024b89;
+  border: 1px solid #024b89;
+}
+.logo{
+  width: 90px;
+  cursor: pointer;
+}
+/* .menu{
+
+} */
+.menu ul{
+  padding: 0;
+  margin: 0;
+}
+.menu ul li{
+  list-style-type:none;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.menu ul li a{
+  color: white;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 1209px)
+{
+  .menu{
+    position: absolute;
+    right: 80px;
+    /* top: 62px; */
+    background-color: #4ba9e9;
+  }
+  .menu ul li{
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 999px)
+{
+  .menu{
+    position: fixed;
+    z-index: 100;
+    right: -300px;
+    top: 60px;
+    width: 300px;
+    height: 100%;
+    background-color: #4ba9e9;
+  }
+  .menu ul li{
+    margin-left: 0;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .menu ul li a{
+    padding: 15px 80px;
+  }
+  .menu-icon{
+    display: inline-block;
+    position: relative;
+    right: 20px;
+    top: 5px;
+    cursor: pointer;
+  }
+  .menu-icon span{
+    width: 35px;
+    height: 3px;
+    display: block;
+    background-color: white;
+  }
+  .menu-icon span:nth-child(2){
+    margin: 5px 0;
+  }
+  .menuClass{
+    right: 0;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+
+@media only screen and (max-width: 768px)
+{
+  .menu-icon{
+    display: inline-block;
+    position: relative;
+    right: 0px;
+    left: 80%;
+    top: 5px;
+    cursor: pointer;
+  }
+}
+

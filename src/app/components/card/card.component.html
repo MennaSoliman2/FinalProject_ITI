@@ -1,0 +1,115 @@
+<input type="text" [(ngModel)]="searchname" placeholder="Seach by Name or Model..." class="input">
+<button (click)="search(searchname)" type="button" class="btn btn1">Search</button>
+<button (click)="Reset()" type="button" class="btn">Reset</button>
+
+<!-- <input type="text" [(ngModel)]="searchmodel" placeholder="Seach by Model...">
+<button (click)="searchModel(searchmodel)" type="button" class="btn btn1">Search</button> -->
+<section class="product">
+    <div class="cards" *ngFor="let product of filterProducts">
+        <div class="imgBx">
+            <img [src]="product.imageSrc" alt="">
+        </div>
+        <div class="details text-light">
+            <h3>{{product.name}}<br><span>{{product.model}}</span></h3>
+            <h4>Product Details</h4>
+            <p>{{product.describtion}}</p>
+            <div class="group">
+                <h2><sup>$</sup>{{product.price}}</h2>
+                <!-- <a href="#">Buy Now</a> -->
+            </div>
+
+            <button class="btn3" (click)="AddToTeam(product)" [disabled]="product.quantity == 0"> Buy Now</button>
+            <!-- <button class="btn3" (click)="deleteProduct(product)">Delete</button> -->
+
+            <h5 class="h5"  [ngClass]="product.quantity <= 5 && product.quantity > 0 ?'red' : 'hidden' ">Avillable Quantity : {{product.quantity}}</h5>
+            <h5  class="h5" [ngClass]="product.quantity == 0? 'red' : 'hidden'">Out Of Stock</h5>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- <div class="container w-75 m-auto my-5">
+	<form #addproductForm="ngForm">
+    <legend class="text-center fw-semibold fs-2">Add New Product</legend>
+    <div>
+      <label for="id" class="me-5">product id</label>
+      <input type="text" name="id" id="id" [(ngModel)]="id">
+    </div>
+    <div>
+      <label for="img" class="me-1">product Image</label>
+      <input type="text" name="img" id="img" [(ngModel)]="img">
+    </div>
+    <div>
+      <label for="name" class="me-2">product Name</label>
+      <input type="text" name="name" id="name" [(ngModel)]="name">
+    </div>
+    <button class="btn btn5" (click)="submit()">Submit</button>
+  </form>
+</div> -->
+
+
+<!-- reactive form -->
+
+<!-- <div class="container">
+  <form [formGroup]="AddproductForm">
+    <input type="text" name="" id="" placeholder="enter the id..." formControlName="productId">
+    <br>
+    <input type="text" name="" id="" placeholder="enter the imageSrc..." formControlName="productImage">
+    <br>
+    <input type="text" name="" id="" placeholder="enter the name..." formControlName="productName">
+    <br>
+    <button class="btn btn5" (click)="submit()">submit</button>
+  </form>
+</div> -->
+
+<div class="container m-auto">
+  <form [formGroup]="AddProductForm" >
+    <div>
+      <label for="name" class="me-5">Product id</label>
+      <input type="text"  name="FullName"   formControlName="id" class="ms-5">
+
+   </div>
+
+   <div>
+      <label for="name" class="me-1">Product image</label>
+      <input type="text"  name="FullName"   formControlName="img" class="ms-5">
+
+    </div>
+    <div>
+        <label for="name" class="me-2">Product Name</label>
+        <input type="text"  name="FullName"   formControlName="name" class="ms-5">
+
+    </div>
+    <div>
+      <label for="name" class="me-2">Product model</label>
+      <input type="text"  name="FullName"   formControlName="model" class="ms-5">
+
+  </div>
+  <div>
+    <label for="name" class="">Product description</label>
+    <input type="text"  name="FullName"   formControlName="desc" class="ms-3">
+
+</div>
+    <div>
+
+        <label for="age" class="me-4">Product price</label>
+        <input type="number"  name="Age"   formControlName="price" class="ms-5">
+
+    </div>
+    <div>
+      <label for="name" class="me-1">Product quntity</label>
+      <input type="number"  name="FullName"   formControlName="qun" class="ms-5">
+  </div>
+
+    <button (click)="Submit()" class="btn btn5">Submit</button>
+
+</form>
+</div>
+
+
+
+

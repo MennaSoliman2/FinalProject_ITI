@@ -1,0 +1,19 @@
+<section class="product">
+  <div class="cards" *ngFor="let product of apiProduct">
+      <div class="imgBx">
+          <img [src]="product.image" alt="">
+      </div>
+      <div class="details">
+          <h3>{{product.title}}<br><span>{{product.category}}</span></h3>
+          <h4>Product Details</h4>
+          <!-- <p>{{product.description}}</p> -->
+          <div class="group">
+              <h2><sup>$</sup>{{product.price}}</h2>
+          </div>
+
+          <button class="btn3" (click)="AddTeam(product)">Buy Now</button>
+          <!-- <h5 class="h5"  [ngClass]="product.rating.count<=5 && product.rating.count>0 ?'red' : '' ">Avillable Quantity : {{product.quantity}}</h5>
+          <h5  class="h5" [ngClass]="product.rating.count==0 ? 'red' : 'hidden' ">Out Of Stock</h5> -->
+      </div>
+  </div>
+</section>

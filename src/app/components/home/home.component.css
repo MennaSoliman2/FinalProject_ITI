@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Josefin+Sans:wght@100;200;300&display=swap');
+.hero{
+  height: 100vh;
+  background-attachment: fixed;
+  padding-top: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  min-height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-attachment: #F1F3F4;
+}
+.hero-title{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 75px;
+  color: #4ba9e9;
+  margin-bottom: 10px;
+}
+.hero-title > strong {
+  display: block;
+  font-weight: 700;
+  color: black;
+}
+.hero-text{
+  line-height: 1.8;
+  max-width: 46ch;
+  margin-bottom: 25px;
+  color: rgb(69, 69, 69);
+}
+.btn{
+  padding: 10px 30px;
+  background-color: #4ba9e9;
+  border: 1px solid #4ba9e9;
+  border-radius: 10px;
+  color: white;
+}
+.btn:hover{
+  background-color: aliceblue;
+  color: #4ba9e9;
+}
+
+@media (max-width:453px) {
+  .hero{
+    height: 100%;
+    padding-top: 0;
+  }
+  .hero-title{
+    line-height: 50px;
+  }
+  .hero-title > strong {
+    font-size: 26px;
+  }
+}
