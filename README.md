@@ -1,2 +1,2 @@
-# FinalProduct_ITI
+# FinalProject_ITI
 The final Project in ITI(Summer Training Frontend using Angular)
